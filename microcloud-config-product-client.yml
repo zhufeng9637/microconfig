@@ -6,15 +6,15 @@ spring:
 server:
  port: 8080
 mybatis:
- mapper-locations: # ËùÓĞµÄmapperÓ³ÉäÎÄ¼ş
+ mapper-locations: # æ‰€æœ‰çš„mapperæ˜ å°„æ–‡ä»¶
  - classpath:mapping/*.xml
 spring:
  datasource:
-   type: com.alibaba.druid.pool.DruidDataSource # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-   driver-class-name: com.mysql.jdbc.Driver # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-   url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=GMT%2B8 # Êı¾İ¿âÁ¬½ÓµØÖ·
-   username: root # Êı¾İ¿âÓÃ»§Ãû
-   password: root1234% # Êı¾İ¿âÁ¬½ÓÃÜÂë
+   type: com.alibaba.druid.pool.DruidDataSource # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+   driver-class-name: com.mysql.jdbc.Driver # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+   url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=GMT%2B8 # æ•°æ®åº“è¿æ¥åœ°å€
+   username: root # æ•°æ®åº“ç”¨æˆ·å
+   password: root # æ•°æ®åº“è¿æ¥å¯†ç 
  application:
    name: microcloud-config-product-client
  profiles: dev
@@ -24,14 +24,14 @@ logging:
     cn.enjoy.mapper: debug
 
 eureka:
-  client: # ¿Í»§¶Ë½øĞĞEureka×¢²áµÄÅäÖÃ
+  client: # å®¢æˆ·ç«¯è¿›è¡ŒEurekaæ³¨å†Œçš„é…ç½®
     service-url:
       defaultZone: http://admin:enjoy@localhost:7001/eureka
   instance:
     instance-id: microcloud-config-product-client
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 2 # ÉèÖÃĞÄÌøµÄÊ±¼ä¼ä¸ô£¨Ä¬ÈÏÊÇ30Ãë£©
-    lease-expiration-duration-in-seconds: 5  # Èç¹ûÏÖÔÚ³¬¹ıÁË5ÃëµÄ¼ä¸ô£¨Ä¬ÈÏÊÇ90Ãë£©
+    lease-renewal-interval-in-seconds: 2 # è®¾ç½®å¿ƒè·³çš„æ—¶é—´é—´éš”ï¼ˆé»˜è®¤æ˜¯30ç§’ï¼‰
+    lease-expiration-duration-in-seconds: 5  # å¦‚æœç°åœ¨è¶…è¿‡äº†5ç§’çš„é—´éš”ï¼ˆé»˜è®¤æ˜¯90ç§’ï¼‰
 
 info:
   app.name: microcloud-provider-product
@@ -50,15 +50,15 @@ management:
 server:
  port: 8081
 mybatis:
- mapper-locations: # ËùÓĞµÄmapperÓ³ÉäÎÄ¼ş
+ mapper-locations: # æ‰€æœ‰çš„mapperæ˜ å°„æ–‡ä»¶
  - classpath:mapping/*.xml
 spring:
  datasource:
-   type: com.alibaba.druid.pool.DruidDataSource # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-   driver-class-name: com.mysql.jdbc.Driver # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-   url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=GMT%2B8 # Êı¾İ¿âÁ¬½ÓµØÖ·
-   username: root # Êı¾İ¿âÓÃ»§Ãû
-   password: root1234% # Êı¾İ¿âÁ¬½ÓÃÜÂë
+   type: com.alibaba.druid.pool.DruidDataSource # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+   driver-class-name: com.mysql.jdbc.Driver # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+   url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=GMT%2B8 # æ•°æ®åº“è¿æ¥åœ°å€
+   username: root # æ•°æ®åº“ç”¨æˆ·å
+   password: root # æ•°æ®åº“è¿æ¥å¯†ç 
  application:
    name: microcloud-config-product-client
  profiles: beta
@@ -68,14 +68,14 @@ logging:
     cn.enjoy.mapper: debug
 
 eureka:
-  client: # ¿Í»§¶Ë½øĞĞEureka×¢²áµÄÅäÖÃ
+  client: # å®¢æˆ·ç«¯è¿›è¡ŒEurekaæ³¨å†Œçš„é…ç½®
     service-url:
       defaultZone: http://admin:enjoy@localhost:7002/eureka
   instance:
     instance-id: microcloud-config-product-client
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 2 # ÉèÖÃĞÄÌøµÄÊ±¼ä¼ä¸ô£¨Ä¬ÈÏÊÇ30Ãë£©
-    lease-expiration-duration-in-seconds: 5  # Èç¹ûÏÖÔÚ³¬¹ıÁË5ÃëµÄ¼ä¸ô£¨Ä¬ÈÏÊÇ90Ãë£©
+    lease-renewal-interval-in-seconds: 2 # è®¾ç½®å¿ƒè·³çš„æ—¶é—´é—´éš”ï¼ˆé»˜è®¤æ˜¯30ç§’ï¼‰
+    lease-expiration-duration-in-seconds: 5  # å¦‚æœç°åœ¨è¶…è¿‡äº†5ç§’çš„é—´éš”ï¼ˆé»˜è®¤æ˜¯90ç§’ï¼‰
 
 info:
   app.name: microcloud-config-product-client
