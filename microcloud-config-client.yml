@@ -13,8 +13,13 @@ spring:
 
 eureka:
  client:
-  service-url:
-    defaultZone: http://admin:enjoy@localhost:7001/eureka
+  serviceUrl:
+    defaultZone: http://admin:enjoy@localhost:7301/eureka
+  register-with-eureka: false
+
+info:
+  app.name: microcloud-config-client-dev
+  company.name: enjoy
 ---
 server:
   port: 8102
@@ -26,5 +31,10 @@ spring:
 
 eureka:
  client:
-  service-url:
-    defaultZone: http://admin:enjoy@localhost:7001/eureka
+  serviceUrl:
+    defaultZone: http://admin:enjoy@localhost:7301/eureka
+  register-with-eureka: false
+  
+info:
+  app.name: microcloud-config-client-dev
+  company.name: enjoy
